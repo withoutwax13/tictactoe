@@ -2,26 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    background-color: #F5F5F5; /* A light gray background */
+    color: #333; /* Dark gray text */
+    font-family: 'Helvetica', 'Arial', sans-serif; /* A clean, easy-to-read font */
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+    padding-top: 5px;
+  }
+
+h1 {
+    color: #333; /* Dark gray text */
+    font-family: 'Helvetica', 'Arial', sans-serif; /* A clean, easy-to-read font */
+    text-align: center; /* Center the text */
+    padding: 20px; /* Some padding to give the text some room */
+    font-size: 2.5em; /* A larger font size for headings */
+    font-weight: 600; /* Bold font weight for headings */
+}
+
+button {
+    background-color: #FFD700; /* A warm, gold color for buttons */
+    color: #333; /* Dark gray text on buttons */
+    border: none; /* Remove the default button border */
+    padding: 10px 20px; /* Some padding to make the buttons larger */
+    border-radius: 5px; /* Rounded corners on buttons */
+    font-size: 1em; /* A comfortable font size for button text */
+    cursor: pointer; /* A pointer cursor when hovering over buttons */
+}
+
+button:hover {
+    background-color: #FFA500; /* A darker gold color when hovering over buttons */
+}
+
+table {
+    margin: auto; /* Center the game board */
+    border-collapse: collapse; /* Remove the space between table cells */
+}
+
+td {
+    border: 1px solid #333; /* A border around each cell */
+    width: 60px; /* A comfortable size for each cell */
+    height: 60px; /* A comfortable size for each cell */
+    text-align: center; /* Center the text in each cell */
+    vertical-align: middle; /* Center the text vertically in each cell */
+}
+
+button.reset {
+    background-color: #add8e6; /* A light blue color for buttons */
+    color: #333; /* Dark gray text on buttons */
+    border: 1px solid #90ee90; /* A light green border */
+    padding: 10px 20px; /* Some padding to make the buttons larger */
+    border-radius: 5px; /* Slight rounded corners on buttons */
+    font-size: 1em; /* A comfortable font size for button text */
+    cursor: pointer; /* A pointer cursor when hovering over buttons */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    font-weight: 600; /* Bold font weight for button text */
+}
+
+button.reset:hover {
+    background-color: #87cefa; /* A slightly darker blue color when hovering over buttons */
 }
